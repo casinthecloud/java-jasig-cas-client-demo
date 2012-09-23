@@ -11,11 +11,44 @@
 	<name>CAS client demo : application</name>
 	<description>CAS client demo : application</description>
 	<dependencies>
+		<!-- 3.2.1 with SAML -->
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.opensaml</groupId>
+			<artifactId>opensaml</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.santuario</groupId>
+			<artifactId>xmlsec</artifactId>
+			<version>1.4.3</version>
+		</dependency>
 		<dependency>
 			<groupId>org.jasig.cas.client</groupId>
 			<artifactId>cas-client-core</artifactId>
 			<version>3.2.1</version>
 		</dependency>
+		<!-- 3.3 -->
+		<!-- dependency>
+			<groupId>org.jasig.cas.client</groupId>
+			<artifactId>cas-client-core</artifactId>
+			<version>3.3-SNAPSHOT</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.0.7</version>
+		</dependency-->
 	</dependencies>
 	<build>
 		<finalName>${project.artifactId}</finalName>
