@@ -38,7 +38,7 @@
 					</webApp>
 					<contextHandlers>
 						<contextHandler implementation="org.eclipse.jetty.webapp.WebAppContext">
-							<war>${basedir}/../cas-client-demo-app/target/cas-client-demo-app.war</war>
+							<war>${basedir}/../cas-client-demo-server/target/cas-client-demo-server.war</war>
 							<contextPath>/cas</contextPath>
 						</contextHandler>
 					</contextHandlers>
