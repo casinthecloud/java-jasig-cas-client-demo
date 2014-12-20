@@ -12,6 +12,7 @@ Most of the configuration is defined in the **src/main/webapp/WEB-INF/web.xml** 
 Although the configuration may handle logout requests directly from the CAS server, the logout is performed by calling the **http://localhost:8080/logout.jsp** url
 from the logout page of the CAS server (in the browser) as the CAS server is obviously not able to contact directly your **localhost:8080**.
 It would work with a real public host name.
+
 ==
 
 ![Français](https://www.casinthecloud.com/img/other/flag_fr.png)
