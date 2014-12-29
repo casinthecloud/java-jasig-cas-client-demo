@@ -1,28 +1,28 @@
-java-jasig-cas-client-demo
-==========================
+Java webapp protected by the Jasig / Apereo CAS client
+==
 
 ![English](https://www.casinthecloud.com/img/other/flag_en.png)
 
-Demo using the Jasig / Apereo CAS client in Java to protect a web application.
+Maven demo using the Jasig / Apereo CAS client (v3.3.3) to protect a web application.
 
 Use **mvn clean compile jetty:run** to start the webapp on **http://localhost:8080**. The url 'protected/index.jsp' is protected and should trigger a CAS authentication.
 
-Most of the configuration is defined in the **src/main/webapp/WEB-INF/web.xml** file. Use your own CAS in the cloud server
+Most of the configuration is defined in the **src/main/webapp/WEB-INF/web.xml** file.
 
-Although the configuration may handle logout requests directly from the CAS server, the logout is performed by calling the **http://localhost:8080/logout.jsp** url
-from the logout page of the CAS server (in the browser) as the CAS server is obviously not able to contact directly your **localhost:8080**.
-It would work with a real public host name.
+Use your own CAS in the cloud server with the following service:
+- Service url: 'http://localhost:8080/protected/*' as an 'Ant pattern'
+- 'Call from the browser to the specific application url for logout: http://localhost:8080/logout.jsp'.
 
 ==
 
 ![Français](https://www.casinthecloud.com/img/other/flag_fr.png)
 
-Démo utilisant le client CAS Jasig / Apereo en Java pour protéger une application web.
+Démo utilisant le client CAS Jasig / Apereo (v3.3.3) pour protéger une application web.
 
 Utilisez **mvn clean compile jetty:run** pour lancer le site web sur **http://localhost:8080**. L'url 'protected/index.jsp' est protégée et déclenche une authentification CAS.
 
-L'essentiel de la configuration est défini dans le fichier **src/main/webapp/WEB-INF/web.xml**. Utilisez votre propre serveur CAS in the cloud
+L'essentiel de la configuration est défini dans le fichier **src/main/webapp/WEB-INF/web.xml**.
 
-Bien que la configuration puisse gérer les requêtes de déconnexion directement depuis le serveur CAS, la déconnexion est faîte en appelant l'url **http://localhost:8080/logout.jsp**
-depuis la page de déconnexion du serveur CAS (dans le navigateur) car le serveur CAS n'est évidemment pas capable de contacter directement votre **localhost:8080**.
-Cela fonctionnerait avec un vrai nom de domaine public.
+Utilisez votre propre serveur CAS in the cloud avec le service suivant :
+- Url de service : 'http://localhost:8080/protected/*' en tant que 'Expression Ant'
+- 'Appel depuis le navigateur de l'url applicative spécifique pour la déconnexion : http://localhost:8080/logout.jsp'.

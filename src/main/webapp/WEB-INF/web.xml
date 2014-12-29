@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_5.xsd"
 	version="2.5">
 
-	<display-name>Demo webapp protected by the Java Jasig CAS client</display-name>
+	<display-name>Demo webapp protected by the Java Jasig / Apereo CAS client</display-name>
 
 	<!-- Filter to handle logout requests sent directly by the CAS server -->
 	<filter>
@@ -22,7 +22,7 @@
 	</listener>
 
 	<!-- Define the protected urls of your application -->
-	<!-- #### change with your own CAS in the cloud server and your real hostname #### -->
+	<!-- #### change with your own CAS in the cloud server and your host name #### -->
 	<filter>
 		<filter-name>CAS Authentication Filter</filter-name>
 		<filter-class>org.jasig.cas.client.authentication.AuthenticationFilter
@@ -43,7 +43,7 @@
 	</filter-mapping>
 
 	<!-- Define the urls on which you can validate a service ticket -->
-	<!-- #### change with your own CAS in the cloud server and your real hostname #### -->
+	<!-- #### change with your own CAS in the cloud server and your host name #### -->
 	<filter>
 		<filter-name>CAS Validation Filter</filter-name>
 		<filter-class>org.jasig.cas.client.validation.Cas20ProxyReceivingTicketValidationFilter
