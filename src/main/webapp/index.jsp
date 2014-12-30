@@ -1,8 +1,10 @@
 <%@ page pageEncoding="UTF-8" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@page import="org.jasig.cas.client.authentication.AttributePrincipalImpl"%>
 <!DOCTYPE html>
 <html>
 <head>
+	<title>java-jasig-cas-client-demo</title>
 	<meta charset="UTF-8" />
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
 </head>
@@ -15,8 +17,13 @@
 			<li><a href="https://freeuse1.casinthecloud.com/leleujgithub/logout?service=http://localhost:8080">Call the CAS logout</a></li>
 		</ul>
 		<h3>
-			<p>Remote user: <%=request.getRemoteUser()%></p>
-			<p>User principal: <%=request.getUserPrincipal()%></p>
+			<% AttributePrincipalImpl user = (AttributePrincipalImpl) request.getUserPrincipal();
+			if (user != null) { %>
+				<p>User: <%=user.getName()%></p>
+				<p>Attributes: <%=user.getAttributes()%></p>
+			<% } else { %>
+				<p>Unauthenticated / anonymous user</p>
+			<% } %>
 		</h3>
 	</div>
 </body>
