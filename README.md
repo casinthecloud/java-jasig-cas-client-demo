@@ -1,4 +1,4 @@
-Java webapp protected by the Jasig / Apereo CAS client
+Java webapp protected by the Jasig / Apereo CAS client (https://github.com/Jasig/java-cas-client)
 ==
 
 ![English](https://www.casinthecloud.com/img/other/flag_en.png)
