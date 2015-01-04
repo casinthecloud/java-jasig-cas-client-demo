@@ -15,8 +15,9 @@ Use your own CAS in the cloud server with the following option:
 
 and the following service:
 
-- Service url: 'http://localhost:8080/protected/*' as an 'Ant pattern'
-- 'Call from the browser to the specific application url for logout: http://localhost:8080/logout.jsp'.
+- *Pattern that matches the url of the service* : 'http://localhost:8080/protected/*' as an 'Ant pattern'
+- 'Call from the browser to the specific application url for logout: http://localhost:8080/logout.jsp'
+- *Returned attribute(s)* : 'all the attributes'.
 
 ==
 
@@ -34,5 +35,6 @@ Utilisez votre propre serveur CAS in the cloud avec l'option :
 
 et le service suivant :
 
-- Url de service : 'http://localhost:8080/protected/*' en tant que 'Expression Ant'
-- 'Appel depuis le navigateur de l'url applicative spécifique pour la déconnexion : http://localhost:8080/logout.jsp'.
+- *Expression définissant l'url du service* : 'http://localhost:8080/protected/*' en tant que 'Expression Ant'
+- 'Appel depuis le navigateur de l'url applicative spécifique pour la déconnexion : http://localhost:8080/logout.jsp'
+- *Attribut(s) renvoyé(s)* : 'tous les attributs'.
