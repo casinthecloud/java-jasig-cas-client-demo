@@ -1,40 +1,12 @@
 Java webapp protected by the Jasig / Apereo CAS client (https://github.com/Jasig/java-cas-client)
 ==
 
-![English](https://www.casinthecloud.com/img/other/flag_en.png)
-
 Maven demo using the Jasig / Apereo CAS client (v3.3.3) to protect a web application.
 
 Use **mvn clean compile jetty:run** to start the webapp on **http://localhost:8080**. The url 'protected/index.jsp' is protected and should trigger a CAS authentication.
 
 Most of the configuration is defined in the **src/main/webapp/WEB-INF/web.xml** file.
 
-Use your own CAS in the cloud server with the following option:
+A specific logout application url is available at: http://localhost:8080/logout.jsp.
 
-- 'Authorize redirection urls after logout'
-
-and the following service:
-
-- *Pattern that matches the url of the service* : 'http://localhost:8080/protected/*' as an 'Ant pattern'
-- 'Call from the browser to the specific application url for logout: http://localhost:8080/logout.jsp'
-- *Returned attribute(s)* : 'all the attributes'.
-
-==
-
-![Français](https://www.casinthecloud.com/img/other/flag_fr.png)
-
-Démo utilisant le client CAS Jasig / Apereo (v3.3.3) pour protéger une application web.
-
-Utilisez **mvn clean compile jetty:run** pour lancer le site web sur **http://localhost:8080**. L'url 'protected/index.jsp' est protégée et déclenche une authentification CAS.
-
-L'essentiel de la configuration est défini dans le fichier **src/main/webapp/WEB-INF/web.xml**.
-
-Utilisez votre propre serveur CAS in the cloud avec l'option :
-
-- 'Autoriser les urls de redirection après déconnexion'
-
-et le service suivant :
-
-- *Expression définissant l'url du service* : 'http://localhost:8080/protected/*' en tant que 'Expression Ant'
-- 'Appel depuis le navigateur de l'url applicative spécifique pour la déconnexion : http://localhost:8080/logout.jsp'
-- *Attribut(s) renvoyé(s)* : 'tous les attributs'.
+Run your CAS server on http://localhost:8888/cas.
