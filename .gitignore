@@ -19,3 +19,5 @@ test-output/
 .cproject
 .buildpath
 .springBeans
+*.iml
+.idea
