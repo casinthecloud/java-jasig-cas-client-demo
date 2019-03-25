@@ -6,6 +6,10 @@
 	<version>3.5.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
+	<properties>
+		<java.cas.client.version>3.6.0-SNAPSHOT</java.cas.client.version>
+	</properties>
+
 	<repositories>
 		<repository>
 			<id>sonatype</id>
@@ -17,7 +21,12 @@
 		<dependency>
 			<groupId>org.jasig.cas.client</groupId>
 			<artifactId>cas-client-core</artifactId>
-			<version>3.5.1</version>
+			<version>${java.cas.client.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jasig.cas.client</groupId>
+			<artifactId>cas-client-support-saml</artifactId>
+			<version>${java.cas.client.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
